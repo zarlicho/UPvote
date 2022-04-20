@@ -31,13 +31,6 @@ def GetVote():
             x = False
             if x == False:
                 driver.get(EnterURL)
-            # InputURL = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, EnterURLSelector)))
-            # InputURL.send_keys(EnterURL)
-            # time.sleep(2)
-            # WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, GOBTN))).click() 
-            # time.sleep(2)
-            # el = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, vote)))
-            # ActionChains(driver).move_to_element(el).perform()
             WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, clos))).click() 
             el = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, vote)))
             ActionChains(driver).move_to_element(el).perform()
