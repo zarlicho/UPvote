@@ -1,4 +1,4 @@
 import AutoVote
-RL = input("enter URL: ")
+RL = input("masukan URL: ")
 
 AutoVote.GetVote(RL)
