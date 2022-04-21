@@ -25,12 +25,12 @@ actions = ActionChains(driver)
 time.sleep(3)
 # driver.find_element_by_xpath("//*[@id='__next']/div[1]/div/div/main/section[1]/div[2]/span/button").click()
 x = False
-def GetVote():
+def GetVote(URL):
     while True:
         try:
             x = False
             if x == False:
-                driver.get(EnterURL)
+                driver.get(URL)
             WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, clos))).click() 
             el = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, vote)))
             ActionChains(driver).move_to_element(el).perform()
@@ -45,5 +45,3 @@ def GetVote():
         except:
             x = True
             print("Disconnected")
-
-
