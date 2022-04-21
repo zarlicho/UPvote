@@ -1,4 +1,4 @@
 import AutoVote
+RL = input("enter URL: ")
 
-for x in range(10):
-    AutoVote.GetVote()
+AutoVote.GetVote(RL)
